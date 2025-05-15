@@ -59,9 +59,7 @@ bool ContaBancaria::verificacao_valor(double valor){
 //sacar
 void ContaBancaria::sacar(double valor) {
     //verificar se o valor é válido
-    bool verificar = verificacao_valor(valor);
-
-    if(verificar == true){
+    if(verificacao_valor(valor)){
         this->saldo -= valor;
     }
 }
